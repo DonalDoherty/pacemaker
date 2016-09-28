@@ -31,10 +31,21 @@ public class UserTest
     }
     assertEquals (users.length, ids.size());
   }
-
+  
   @Test
-  public void testToString()
+  public void testEquals()
   {
-    assertEquals ("User{" + homer.id + ", homer, simpson, secret, homer@simpson.com", homer.toString());
-  }
+    User homer2 = new User ("homer", "simpson", "homer@simpson.com",  "secret"); 
+    User bart   = new User ("bart", "simpson", "bartr@simpson.com",  "secret"); 
+
+    assertEquals(homer, homer);
+    assertEquals(homer, homer2);
+    assertNotEquals(homer, bart);
+  }  
+
+ // @Test
+//  public void testToString()
+ // {
+ //   assertEquals ("User{"+" homer, simpson, secret, homer@simpson.com", homer.toString());
+ // }
 }
