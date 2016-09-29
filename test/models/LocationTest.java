@@ -10,8 +10,8 @@ public class LocationTest
   @Test
   public void testCreate()
   {
-    assertEquals (0.01, 23.3f, locations[0].latitude);
-    assertEquals (0.01, 33.3f, locations[0].longitude);
+    assertEquals (23.3f, locations[0].latitude, 0.01);
+    assertEquals (33.3f, locations[0].longitude, 0.01);
   }
 
   @Test

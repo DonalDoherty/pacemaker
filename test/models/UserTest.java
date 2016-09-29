@@ -43,9 +43,9 @@ public class UserTest
     assertNotEquals(homer, bart);
   }  
 
- // @Test
-//  public void testToString()
- // {
- //   assertEquals ("User{"+" homer, simpson, secret, homer@simpson.com", homer.toString());
- // }
+  @Test
+  public void testToString()
+  {
+    assertEquals ("User{" + homer.id + ", homer, simpson, secret, homer@simpson.com}", homer.toString());
+  }
 }
